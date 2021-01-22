@@ -1,7 +1,9 @@
 public interface ShapeInterface {
     
-    public void display();
-
-    public float surfaceArea();
+    public double surfaceArea();
+    
+    default void display() {
+            System.out.println(surfaceArea());
+        }
 
 }
