@@ -18,10 +18,11 @@ public class CLI_SumsJK {
                 System.out.print("invalid arguements "+err);
             }
         }
-        System.out.println("Sum = "+numSum);
-    } else {
-        System.err.print("No arguments found");
-    }
+            System.out.println("Sum = "+numSum);
+        } else {
+            // Exception handling for zero arg case
+            System.err.print("No arguments found");
+        }
     }
 
 }
