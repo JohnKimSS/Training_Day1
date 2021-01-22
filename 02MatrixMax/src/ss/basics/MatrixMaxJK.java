@@ -1,5 +1,6 @@
 public class MatrixMaxJK {
     public static void main(String[] args) {
+        // Declare / initialize all vars
         int n = 5;
         int m = 5;
         int [][] matrix = new int[n][m];
@@ -14,15 +15,14 @@ public class MatrixMaxJK {
         // Find the max value of the array and save the indices
         for(int i=0; i < n; i++) {
             for(int j=0; j < m; j++) {
-                if(matrix[i][j] > maxNum) {
+                if( matrix[i][j] > maxNum ) {
                     maxNum = matrix[i][j];
                     indices[0] = i;
                     indices[1] = j;
                 } 
             }
         }
-    System.out.println("Max val = " + maxNum + ", (n,m) = " + indices[0] + ", " + indices[1]);
+    System.out.println("Max val = " + maxNum + ", (i, j) = " + indices[0] + ", " + indices[1]);
     }
-
 
 }
