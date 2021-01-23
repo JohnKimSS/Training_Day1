@@ -15,7 +15,8 @@ public class DirList {
     string fulldir3 = "C:\Users\johnk\OneDrive\Documents\GitHub\Practice\React\Training_Day1";
     string shortdir1 = "../../..";
     public static void main(String[] args) {
-        try {File dirPath = new File("C:\\Users\\johnk\\OneDrive\\Documents\\GitHub\\Practice\\React\\Training_Day1");
+        try {
+            File dirPath = new File("C:\\Users\\johnk\\OneDrive\\Documents\\GitHub\\Practice\\React\\Training_Day1");
             // create list called content of everything in the path specified above
             String content[] = dirPath.list();
             // loop through contents of the list 'contents'
