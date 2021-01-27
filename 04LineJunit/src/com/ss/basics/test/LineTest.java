@@ -3,7 +3,7 @@ package com.ss.basics.test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertThrows;
+//import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -22,25 +22,21 @@ public class LineTest {
 	
 		assertEquals(1.0, ln.getSlope(), 0.001);
 		assertNotEquals(4.20, ln.getSlope(), 0.001);
-		assertThrows(ArithmeticException.class, lnBy0.getSlope());
+		//assertThrows(ArithmeticException.class, lnBy0.getSlope());
 	}
 	
-
+	@Test
 	public void getDistance() {
 		assertEquals(Math.sqrt(8.0), ln.getDistance(), 0.001);
 		assertNotEquals(5.0, ln.getDistance(), 0.001);
 		
 	}
 	
+	@Test
 	public void parallelTo() {
 		assertTrue(ln.parallelTo(parLn));
 		assertFalse(ln.parallelTo(perpLn));
 	}
 	
 	
-	
-//	@Test
-//	public void getDistance() {
-//		
-//	}
 }
