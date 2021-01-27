@@ -2,34 +2,58 @@ package com.ss.basics.wk1assign;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.stream.Stream;
 
 public class Lambdas implements PerformOperation {
 	
 	public static void main(String[] args) {
-		ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 121));
-		Lambdas obj = new Lambdas();
-		//System.out.println(obj.isOdd(nums));
+		String str = args.toString();
+		String[] arr = str.split("\n");
+		
+		Lambdas lam = new Lambdas();
+		lam.handleInput(arr);
+	}
+	
+	public static String handleInput(String[] arr) {
+		for(String el: arr) {
+			Integer input = Integer.parseInt(el);
+				System.out.println(input);
+			Integer action = Integer.parseInt(el);
+			switch(input) {
+			case 1: 
+				return isOdd();
+				break;
+			case 2:
+				return isPrime();
+				break;
+			case 3:
+				return isPalindrome();
+				break;
+			default:
+				return "invalid input(s)";
+			}
+		};
 	}
 	
 	public static PerformOperation isOdd() {
-		return num -> num % 2 == 0 ? "even" : "odd";
+		return num -> num % 2 == 0 ? "EVEN" : "ODD";
 	}
 	
 	public static PerformOperation isPrime() {
 		return num -> {
 			if(num < 2) { // 0, 1 aren't prime
-				return false;
+				return "1 or 0 NOT PRIME";
 			} else if (num == 2) { // 2 is a prime number
-				return true;
+				return "PRIME";
 			} else if (num % 2) { // all even no aren't prime
-				return false;
+				return "COMPOSITE";
 			}
 				IntStream.range(3, 9).forEach(i -> { // Loop through all other modulo
 					if(num % i) {
-						return false;
+						return "COMPOSITE";
 					}
 				});
-			return true;
+			return "PRIME";
 		};
 	}
 	
@@ -37,7 +61,11 @@ public class Lambdas implements PerformOperation {
 		return num -> {
 			String orig = Integer.toString();
 			String reverse = new StringBuilder(Integer.toString(num).reverse.toString());
-			return orig.equalTo(reverse);
+			if(orig.equalTo(reverse)) {
+				return "IS PALINDROME";
+			} else {
+				return "IS NOT PALINDROME";
+			};
 		};
 	}
 	
