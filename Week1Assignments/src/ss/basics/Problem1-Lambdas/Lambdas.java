@@ -6,9 +6,9 @@ import java.util.Arrays;
 public class Lambdas implements PerformOperation {
 	
 	public static void main(String[] args) {
-		ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6));
-		Lamdas obj = new Lambdas();
-		System.out.println(obj.isOdd(nums));
+		ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 121));
+		Lambdas obj = new Lambdas();
+		//System.out.println(obj.isOdd(nums));
 	}
 	
 	public static PerformOperation isOdd() {
