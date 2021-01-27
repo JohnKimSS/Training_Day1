@@ -35,11 +35,22 @@ public class Functional {
 		return doubledNums;
 	}
 	
-	public static void noX() {
-		
+	public static ArrayList<String> noX(ArrayList<String> arr) {
+		ArrayList<String> noEx = new ArrayList<>();
+		arr.forEach(el -> {
+			String modEl;
+			for(char c : el) {
+				if(c == 'x') {
+				} else {
+					modEl += c;
+				}
+			}
+			noEx.add(modEl);
+		});
+		return noEx;
 	}
 	
-	public static void groupSumClump() {
+	public static boolean groupSumClump() {
 		
 	}
 
