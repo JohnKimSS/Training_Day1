@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-
 public class Threads {
     public static void main(String[] args) throws InterruptedException {
         final ProdCon pc = new ProdCon();
@@ -32,6 +30,6 @@ public class Threads {
         t1.join();
         t2.join();
     
-}
+    }
 
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="02MatrixMax/src/ss/basics"/>
+	<classpathentry kind="src" path="02ShapePoly/src/ss/basics"/>
+	<classpathentry kind="src" path="03FileLetterCount/src/ss/basic"/>
+	<classpathentry kind="src" path="03TextAppend/src"/>
+	<classpathentry kind="src" path="04Deadlock"/>
+	<classpathentry kind="src" path="04ProducerConsumer"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
